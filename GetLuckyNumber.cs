@@ -14,6 +14,8 @@ namespace ConsoleApp3
         public static int GetLuckyNumber(int n)
         {
             var count = 0;
+            if(n <= 3)//there is no need to check for a number smaller than the lowest permutation
+                return n;
             for (var i = 1; i <= n; i++)
             {
                 count += CheckForNumberByPosition(i);
